@@ -2,7 +2,7 @@ import { LixeiraIcon } from "./icons/lixeira";
 import imagePizza from "../img/image.png";
 import { LapisEdicao } from "./icons/lapisEdicao";
 
-export default function PizzaComboCard() {
+export const PizzaComboCard = () => {
   return (
     <div className="flex items-start gap-4 p-4 bg-white rounded-lg shadow-md border w-full max-w-md">
       {/* Imagem da pizza com botão de edição */}
@@ -14,7 +14,7 @@ export default function PizzaComboCard() {
         />
         <div className="absolute bottom-1 right-1 bg-black/60 p-1 rounded-full">
           {/* Ícone de lápis (edit) */}
-         <LapisEdicao/>
+          <LapisEdicao />
         </div>
       </div>
 
@@ -36,4 +36,4 @@ export default function PizzaComboCard() {
       </button>
     </div>
   );
-}
+};
