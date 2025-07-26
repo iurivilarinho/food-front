@@ -4,7 +4,7 @@ type PizzaComboCardProps = {
   imageUrl: string;
   title: string;
   description: string;
-  price: string;
+  price: number;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 export const SelecaoItemPedido: React.FC<PizzaComboCardProps> = ({

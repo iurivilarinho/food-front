@@ -1,10 +1,9 @@
-import React from "react";
 
 type PizzaCardProps = {
   imageUrl: string;
   title: string;
   description: string;
-  price: string;
+  price: number;
   selected?: boolean;
   onSelect?: () => void;
 };
