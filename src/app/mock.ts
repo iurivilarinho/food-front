@@ -38,3 +38,26 @@ export const SelecaoItemPedidoMock: SelecaoItemPedidoProps[] = [
     price: "86,00",
   },
 ];
+export const mockDetalheItem = [
+  {
+    id: 1,
+    imageUrl: "https://source.unsplash.com/80x80/?pizza",
+    title: "Calabresa",
+    description: "Molho, queijo, calabresa e cebola",
+    price: "39,90",
+  },
+  {
+    id: 2,
+    imageUrl: "https://source.unsplash.com/80x80/?pizza-mussarela",
+    title: "Mussarela",
+    description: "Molho, queijo e orégano",
+    price: "34,90",
+  },
+  {
+    id: 3,
+    imageUrl: "https://source.unsplash.com/80x80/?pizza-bacon",
+    title: "Bacon",
+    description: "Molho, queijo, bacon e catupiry",
+    price: "42,90",
+  },
+];

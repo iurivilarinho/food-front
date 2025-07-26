@@ -1,21 +1,28 @@
-import React from "react";
+import { cn } from "../utils/cn";
 
 type PizzaComboCardProps = {
   imageUrl: string;
   title: string;
   description: string;
   price: string;
-};
+} & React.HTMLAttributes<HTMLDivElement>;
 
 export const SelecaoItemPedido: React.FC<PizzaComboCardProps> = ({
   imageUrl,
   title,
   description,
   price,
+  className,
+  ...rest
 }) => {
   return (
-    <div className="flex items-center justify-between border rounded-lg p-4 w-full max-w-xl shadow-sm hover:shadow-md transition">
-      {/* Texto à esquerda */}
+    <div
+      className={cn(
+        "flex items-center justify-between border rounded-lg p-4 w-full max-w-xl shadow-sm hover:shadow-md transition",
+        className
+      )}
+      {...rest}
+    >
       <div className="flex-1 pr-4">
         <h3 className="font-semibold text-base">{title}</h3>
         <p className="text-sm text-gray-600">{description}</p>
@@ -24,7 +31,6 @@ export const SelecaoItemPedido: React.FC<PizzaComboCardProps> = ({
         </p>
       </div>
 
-      {/* Imagem à direita */}
       <img
         src={imageUrl}
         alt={title}

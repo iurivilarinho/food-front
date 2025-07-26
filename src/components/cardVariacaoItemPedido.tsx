@@ -9,14 +9,14 @@ type PizzaCardProps = {
   onSelect?: () => void;
 };
 
-export const PizzaCard: React.FC<PizzaCardProps> = ({
+export const VariacaoItem = ({
   imageUrl,
   title,
   description,
   price,
   selected = false,
   onSelect,
-}) => {
+}: PizzaCardProps) => {
   return (
     <div
       className={`flex items-center justify-between border rounded-lg p-4 w-full max-w-md shadow-sm hover:shadow-md transition ${

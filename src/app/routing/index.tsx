@@ -1,20 +1,20 @@
 import { Route, Routes } from "react-router-dom";
 import { SelecaoItemPedido } from "../../components/cardSelecaoItemPedido";
-import { PizzaCard } from "../../components/cardVariacaoItemPedido";
-import { Pedido } from "../../features/pedido/pedido";
 import BottomNavLayout from "../../components/mainLayout";
+import { DetalheItemSelecionado } from "../../features/pedido/detalheItemSelecionado";
+import { Pedido } from "../../features/pedido/pedido";
 
 export const AppRouter = () => {
   return (
+   
     <Routes>
+      <Route
+        path="/detalhes-item-selecionado"
+        element={<DetalheItemSelecionado />}
+      />
       <Route path="/" element={<BottomNavLayout />}>
         <Route path="/" element={<Pedido />} />
-        <Route
-          path="/teste2"
-          element={
-            <PizzaCard description="" price="" imageUrl="" title="sdsd" />
-          }
-        />
+
         <Route
           path="/teste3"
           element={

@@ -5,7 +5,7 @@ import { SelecaoItemPedidoMock } from "../../app/mock";
 export const Pedido = () => {
   const navegar = useNavigate();
   return (
-    <div className="p-4 space-y-4">
+    <div className=" flex flex-col p-4 space-y-4 items-center justify-center overflow-scroll">
       {SelecaoItemPedidoMock.map((combo) => (
         <SelecaoItemPedido
           key={combo.id}
@@ -13,6 +13,7 @@ export const Pedido = () => {
           title={combo.title}
           description={combo.description}
           price={combo.price}
+          onClick={() => navegar("/detalhes-item-selecionado")}
         />
       ))}
     </div>
